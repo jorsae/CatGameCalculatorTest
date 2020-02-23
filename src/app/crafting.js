@@ -1,5 +1,5 @@
-import { CraftingItem } from "./classes";
-import { CraftingRequirement } from "./classes";
+import { CraftingItem } from "../util/classes";
+import { CraftingRequirement } from "../util/classes";
 
 import { craftingRecipes } from "./globals";
 import { rarity } from "./globals";

@@ -17,7 +17,37 @@ function init(){
     document.getElementById("clear").onclick = clear;
     document.getElementById("copyClipboard").onclick = copyClipboard;
     document.getElementById("addFloor").onclick = addFloor;
-    populateFloor();
+    populateItems();
+    //populateFloor();
+}
+
+function populateItems(){
+    const rawMaterials = 3;
+    var h3 = document.getElementsByTagName("h3");
+    var craftingItemAmount = document.getElementsByClassName("crafting-item-amount");
+    var arrows = document.getElementsByClassName("arrow");
+
+    if(h3.length !== craftingRecipes.size - rawMaterials){
+        console.log("Something went terribly wrong");
+        return;
+    }
+    var index = 0;
+    for (const [key, value] of craftingRecipes.entries()) {
+        if(rawMaterials > index){
+            index += 1;
+            continue;
+        }
+        const i = index - rawMaterials;
+        const arrowIndex = i*2;
+
+        arrows[arrowIndex].onclick = function() { clickUp(key)};
+        arrows[arrowIndex + 1].onclick = "clickDown(" + key + ")";
+        arrows[arrowIndex + 1].onclick = function() { clickDown(key)};
+        h3[i].innerText = key;
+        craftingItemAmount[i].id = key + "Amount";
+        index += 1;
+    }
+
 }
 
 /**
@@ -140,7 +170,7 @@ function copyClipboard(){
 function clear(){
     for (const entry of craftingRecipes.entries()) {
         var item = craftingRecipes.get(entry[0]);
-        var itemAmountElement = document.getElementById(item.name.toLowerCase() + 'Amount');
+        var itemAmountElement = document.getElementById(item.name + 'Amount');
         if(itemAmountElement !== null){
             itemAmountElement.value = 0;
         }
@@ -177,8 +207,7 @@ function calculate(){
     var userItemReq = [];
     for (const entry of craftingRecipes.entries()) {
         var item = craftingRecipes.get(entry[0]);
-        var itemAmountElement = document.getElementById(item.name.toLowerCase() + 'Amount');
-        
+        var itemAmountElement = document.getElementById(item.name + 'Amount');
         if(itemAmountElement !== null){
             var itemAmount = parseInt(itemAmountElement.value);
             if(itemAmount > 0){
