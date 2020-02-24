@@ -8,6 +8,8 @@ import { rarity } from "./globals";
 
 import { getCraftingRequirements } from "./crafting_requirement";
 
+import { registerArrowEvent, populateFloor } from "../util/click";
+
 /**
  * Setting up all the button events for the calculator
  */
@@ -18,14 +20,14 @@ function init(){
     document.getElementById("copyClipboard").onclick = copyClipboard;
     document.getElementById("addFloor").onclick = addFloor;
     populateItems();
-    populateFloor();
+    registerArrowEvent(3, craftingRecipes);
+    populateFloor(floorRecipes);
 }
 
 function populateItems(){
     const rawMaterials = 3;
     var h3 = document.getElementsByTagName("h3");
     var craftingItemAmount = document.getElementsByClassName("crafting-item-amount");
-    var arrows = document.getElementsByClassName("arrow");
 
     if(h3.length !== craftingRecipes.size - rawMaterials){
         console.log("Something went terribly wrong");
@@ -38,29 +40,11 @@ function populateItems(){
             continue;
         }
         const i = index - rawMaterials;
-        const arrowIndex = i*2;
-
-        arrows[arrowIndex].onclick = function() { clickUp(key)};
-        arrows[arrowIndex + 1].onclick = "clickDown(" + key + ")";
-        arrows[arrowIndex + 1].onclick = function() { clickDown(key)};
         h3[i].innerText = key;
         craftingItemAmount[i].id = key + "Amount";
         index += 1;
     }
 
-}
-
-/**
- * Populates the select floors html with all floors available.
- */
-function populateFloor(){
-    var select = document.getElementById("floors");
-    for (const [key, value] of floorRecipes.entries()) {
-        var option = document.createElement("option");
-        option.value = value.name;
-        option.innerHTML = value;
-        select.appendChild(option);
-      }
 }
 
 /**

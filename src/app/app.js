@@ -1,6 +1,7 @@
 import { CraftingRequirement } from "../util/classes";
 import { CraftingItem } from "../util/classes";
 import { CraftingItemOutput } from "../util/classes";
+import { registerArrowEvent, populateFloor } from "../util/click";
 
 import { craftingRecipes, floorRecipes } from "./globals";
 import { currentCraft } from "./globals";
@@ -17,20 +18,8 @@ function init(){
     document.getElementById("clear").onclick = clear;
     document.getElementById("copyClipboard").onclick = copyClipboard;
     document.getElementById("addFloor").onclick = addFloor;
-    populateFloor();
-}
-
-/**
- * Populates the select floors html with all floors available.
- */
-function populateFloor(){
-    var select = document.getElementById("floors");
-    for (const [key, value] of floorRecipes.entries()) {
-        var option = document.createElement("option");
-        option.value = value.name;
-        option.innerHTML = value;
-        select.appendChild(option);
-      }
+    registerArrowEvent(4, craftingRecipes);
+    populateFloor(floorRecipes);
 }
 
 /**
@@ -53,7 +42,7 @@ function addFloor(){
 
     var floorReq = floor.requirements;
     for(var i = 0; i < floorReq.length; i++){
-        var itemName = floorReq[i].craftingItem.name.toLowerCase();
+        var itemName = floorReq[i].craftingItem.name;
         var quantity = floorReq[i].quantity;
         var count = document.getElementById(itemName + "Amount");
         if(count === null){
@@ -71,7 +60,7 @@ function addFloor(){
 function craftingItemInputted(){
     for (const entry of craftingRecipes.entries()) {
         var item = craftingRecipes.get(entry[0]);
-        var itemAmountElement = document.getElementById(item.name.toLowerCase() + 'Amount');
+        var itemAmountElement = document.getElementById(item.name + 'Amount');
         
         if(itemAmountElement !== null){
             if(parseInt(itemAmountElement.value) > 0){
@@ -140,7 +129,7 @@ function copyClipboard(){
 function clear(){
     for (const entry of craftingRecipes.entries()) {
         var item = craftingRecipes.get(entry[0]);
-        var itemAmountElement = document.getElementById(item.name.toLowerCase() + 'Amount');
+        var itemAmountElement = document.getElementById(item.name + 'Amount');
         if(itemAmountElement !== null){
             itemAmountElement.value = 0;
         }
@@ -177,7 +166,7 @@ function calculate(){
     var userItemReq = [];
     for (const entry of craftingRecipes.entries()) {
         var item = craftingRecipes.get(entry[0]);
-        var itemAmountElement = document.getElementById(item.name.toLowerCase() + 'Amount');
+        var itemAmountElement = document.getElementById(item.name + 'Amount');
         
         if(itemAmountElement !== null){
             var itemAmount = parseInt(itemAmountElement.value);
