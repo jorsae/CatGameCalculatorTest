@@ -284,6 +284,17 @@ tbody tr:nth-child(even){
     background-color: #a859b4;
 }
 
+/* event.html */
+.raw-material{
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-bottom: 8px;
+}
+
+.selected-raw-material{
+    border: solid 6px white;
+}
+
 /* about.html */
 .about-article{
     margin: 0 auto;
