@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title> Cat Game Crafting Calculator</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A crafting calculator for optimizing your crafting needs in Cat Game - The Cats Collector!">
+        <meta name="description" content="Optimize your cat game crafting the easy way!">
         <link rel="shortcut icon" type="image/png" href="images/favicon.png">
         <script type="text/javascript" src="dist/app.min.js" defer></script>
         <script type="text/javascript" src="dist/all.min.js" defer></script>
@@ -60,11 +60,13 @@
         <h1 class="text-center">Cat Game Calculator</h1>
 
         <p id="eventCountdown" class="event-timer text-center"></p>
-        <h2 id="howToUse" class="text-center no-margin">How to use&nbsp;&nbsp;&nbsp;&nbsp;&#8691;</h2>
+        <button id="howToUse" class="text-center no-margin">How to use&nbsp;&nbsp;&nbsp;&nbsp;&#8691;</button>
         <div id="guideContainer" class="guide-container">
             <ol>
-                <li>Input the items you want to craft. This can be done manually or you can add whole floors at a time.</li>
+                <p class="text-center">For more information go to <a href="index.html">home</a></p>
+                <li>Input the items you want to craft.
                 <li>Select the time you want to use crafting them (shorter time, costs more)</li>
+                <li>1 minute crafting mode, will set all crafting items to take 1 minute to craft.</li>
                 <li>Press the "Calculate meow" button</li>
             </ol>
         </div>
@@ -78,6 +80,7 @@
             <select id="floors" aria-label="Selection to add pre-made floors">
             </select>
             <button id="addFloor" data-toggle="popover" data-placement="top">Add floor</button>
+            <button id="quickCalculate">Calculate meow</button>
             
             <h2>Basic Crafting</h2>
             <div class="crafting-tier">
