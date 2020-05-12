@@ -232,12 +232,10 @@ li:before {
     max-width: 33.33%;
 }
 
-.crafting-item-image{
-    width: 50%;
-    height: auto;
-    left: 0;
-    right: 0;
-    margin: auto;
+.crafting-item-button{
+    background: none;
+    border: none;
+    color: #ffffff;
 }
 
 .crafting-item-amount{
