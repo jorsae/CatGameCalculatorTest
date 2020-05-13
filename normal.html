@@ -85,10 +85,10 @@
             <h2>Basic Crafting</h2>
             <div class="crafting-tier">
                 <div class="crafting-item common">
-                    <button class="crafting-item-button">String <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">String <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="stringInfo"></p>
                     <span>
                         <input id="StringAmount" class="crafting-item-amount" aria-label="Amount of string you want to craft" type="number" value="0" min="0" onclick="this.select()">
-
                     </span>
                     <span>
                         <img class="arrow" src="images/arrow-up.png" alt="Arrow pointing up">
@@ -96,7 +96,8 @@
                     </span>
                 </div>
                 <div class="crafting-item common">
-                    <button class="crafting-item-button">Wood <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Wood <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="woodInfo"></p>
                     <span>
                         <input id="WoodAmount" class="crafting-item-amount" aria-label="Amount of wood you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -106,7 +107,8 @@
                     </span>
                 </div>
                 <div class="crafting-item rare">
-                    <button class="crafting-item-button">Ribbon <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Ribbon <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="ribbonInfo"></p>
                     <span>
                         <input id="RibbonAmount" class="crafting-item-amount" aria-label="Amount of ribbon you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -120,7 +122,8 @@
             <h2>Shiny Crafting</h2>
             <div class="crafting-tier">
                 <div class="crafting-item common">
-                    <button class="crafting-item-button">Metal <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Metal <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="metalInfo"></p>
                     <span>
                         <input id="MetalAmount" class="crafting-item-amount" aria-label="Amount of metal you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -130,7 +133,8 @@
                     </span>
                 </div>
                 <div class="crafting-item rare">
-                    <button class="crafting-item-button">Needles <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Needles <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="needlesInfo"></p>
                     <span>
                         <input id="NeedlesAmount" class="crafting-item-amount" aria-label="Amount of needles you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -140,7 +144,8 @@
                     </span>
                 </div>
                 <div class="crafting-item epic">
-                    <button class="crafting-item-button">Sparkles <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Sparkles <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="sparklesInfo"></p>
                     <span>
                         <input id="SparklesAmount" class="crafting-item-amount" aria-label="Amount of sparkles you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -154,7 +159,8 @@
             <h2>Precious Crafting</h2>
             <div class="crafting-tier">
                 <div class="crafting-item common">
-                    <button class="crafting-item-button">Bronze <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Bronze <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="bronzeInfo"></p>
                     <span>
                         <input id="BronzeAmount" class="crafting-item-amount" aria-label="Amount of bronze you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -164,7 +170,8 @@
                     </span>
                 </div>
                 <div class="crafting-item rare">
-                    <button class="crafting-item-button">Silver <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Silver <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="silverInfo"></p>
                     <span>
                         <input id="SilverAmount" class="crafting-item-amount" aria-label="Amount of silver you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -174,7 +181,8 @@
                     </span>
                 </div>
                 <div class="crafting-item epic">
-                    <button class="crafting-item-button">Gold <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Gold <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="goldInfo"></p>
                     <span>
                         <input id="GoldAmount" class="crafting-item-amount" aria-label="Amount of gold you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -188,7 +196,8 @@
             <h2>Jewel Crafting</h2>
             <div class="crafting-tier">
                 <div class="crafting-item common">
-                    <button class="crafting-item-button">Amethyst <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Amethyst <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="amethystInfo"></p>
                     <span>
                         <input id="AmethystAmount" class="crafting-item-amount" aria-label="Amount of amethyst you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -198,7 +207,8 @@
                     </span>
                 </div>
                 <div class="crafting-item rare">
-                    <button class="crafting-item-button">Pendant <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Pendant <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="pendantInfo"></p>
                     <span>
                         <input id="PendantAmount" class="crafting-item-amount" aria-label="Amount of pendant you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -208,7 +218,8 @@
                     </span>
                 </div>
                 <div class="crafting-item epic">
-                    <button class="crafting-item-button">Necklace <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Necklace <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="necklaceInfo"></p>
                     <span>
                         <input id="NecklaceAmount" class="crafting-item-amount" aria-label="Amount of necklace you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -222,7 +233,8 @@
             <h2>Magic Crafting</h2>
             <div class="crafting-tier">
                 <div class="crafting-item common">
-                    <button class="crafting-item-button">Orb <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Orb <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="orbInfo"></p>
                     <span>
                         <input id="OrbAmount" class="crafting-item-amount" aria-label="Amount of orb you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -232,7 +244,8 @@
                     </span>
                 </div>
                 <div class="crafting-item rare">
-                    <button class="crafting-item-button">Water <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Water <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="waterInfo"></p>
                     <span>
                         <input id="WaterAmount" class="crafting-item-amount" aria-label="Amount of water you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -242,7 +255,8 @@
                     </span>
                 </div>
                 <div class="crafting-item epic">
-                    <button class="crafting-item-button">Fire <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Fire <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="fireInfo"></p>
                     <span>
                         <input id="FireAmount" class="crafting-item-amount" aria-label="Amount of fire you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -256,7 +270,8 @@
             <h2>Ancient Crafting</h2>
             <div class="crafting-tier">
                 <div class="crafting-item rare">
-                    <button class="crafting-item-button">Waterstone <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Waterstone <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="waterstoneInfo"></p>
                     <span>
                         <input id="WaterstoneAmount" class="crafting-item-amount" aria-label="Amount of waterstone you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -266,7 +281,8 @@
                     </span>
                 </div>
                 <div class="crafting-item epic">
-                    <button class="crafting-item-button">Firestone <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Firestone <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="firestoneInfo"></p>
                     <span>
                         <input id="FirestoneAmount" class="crafting-item-amount" aria-label="Amount of firestone you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -276,7 +292,8 @@
                     </span>
                 </div>
                 <div class="crafting-item legendary">
-                    <button class="crafting-item-button">Elementstone <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Elementstone <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="elementstoneInfo"></p>
                     <span>
                         <input id="ElementstoneAmount" class="crafting-item-amount" aria-label="Amount of elementstone ou want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>
@@ -290,7 +307,8 @@
             <h2>Ruin Crafting</h2>
             <div class="crafting-tier">
                 <div class="crafting-item legendary">
-                    <button class="crafting-item-button">Artifact <i class="fa fa-arrow-circle-o-down hvr-icon"></i></button>
+                    <button class="crafting-item-button">Artifact <i class="fa fa-angle-double-down"></i></button>
+                    <p class="crafting-item-info" id="artifactInfo"></p>
                     <span>
                         <input id="ArtifactAmount" class="crafting-item-amount" aria-label="Amount of artifact you want to craft" type="number" value="0" min="0" onclick="this.select()">
                     </span>

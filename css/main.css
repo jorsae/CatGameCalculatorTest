@@ -236,6 +236,18 @@ li:before {
     background: none;
     border: none;
     color: #ffffff;
+    font-size: 1em !important;
+}
+
+.crafting-item-info{
+    display: none;
+    height: 0;
+    font-size: 1em;
+}
+
+.display-crafting-item-info{
+    display: block;
+    height: auto;
 }
 
 .crafting-item-amount{
@@ -248,11 +260,6 @@ li:before {
     -webkit-box-shadow: inset 0px 0px 8px #333333;
     -moz-box-shadow: inset 0px 0px 8px #333333;
     box-shadow: inset 0px 0px 8px #333333;
-}
-
-.crafting-item-info{
-    width: 1.5em;
-    height: auto;
 }
 
 .arrow{
