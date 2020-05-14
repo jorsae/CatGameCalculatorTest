@@ -327,6 +327,13 @@ li:before {
 }
 
 /* output-container */
+#copyClipboard{
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 .output-total{
     display: flex;
     justify-content: center;
@@ -377,7 +384,7 @@ tbody tr:nth-child(even){
 
 /* event.html */
 .raw-material{
-    margin: auto;
+    margin: 4px;
     padding: 8px;
 }
 
