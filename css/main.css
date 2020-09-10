@@ -323,6 +323,8 @@ li:before {
     display: flex;
     justify-content: center;
     align-items: center;
+	max-width: 90vw;
+	margin: auto;
 }
 
 .crafting-button button{
