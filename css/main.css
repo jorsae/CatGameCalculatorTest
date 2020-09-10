@@ -322,6 +322,7 @@ li:before {
 .crafting-button{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .crafting-button button{
