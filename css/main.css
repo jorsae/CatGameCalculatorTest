@@ -117,6 +117,10 @@ h1.text-center{
     justify-content: center;
 }
 
+.calculator-selection-logo{
+    width: 100%;
+}
+
 .calculator-option{
     font-size: 3em;
     border: solid 1px white;
@@ -516,9 +520,15 @@ input[type=checkbox] {
     vertical-align: sub;
 }
 
-/* Light mode buttons */
+/* Settings buttons */
 .settings-container{
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.settings-container .switch{
+    margin-right: 10px;
 }
 
 .settings-label{
@@ -531,6 +541,7 @@ input[type=checkbox] {
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin: 4px;
 }
 
 .switch input { 
