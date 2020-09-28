@@ -51,11 +51,6 @@ h1.text-center{
     border-radius: 8px;
 }
 
-.tooltip-inner{
-    position: absolute;
-    background-color: gray;
-}
-
 /* CSS for cookie policy banner */
 .cookie-paragraph{
     margin: 0 0 0 0;
@@ -264,7 +259,10 @@ li:before {
     background: none;
     color: #ffffff;
     font-size: 1em !important;
-    border: none;
+    border-bottom: solid 3px white;
+}
+.crafting-item-button:hover{
+    color: gold;
 }
 
 .crafting-item-info{
